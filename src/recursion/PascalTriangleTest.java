@@ -2,6 +2,10 @@ package recursion;
 
 import java.util.ArrayList;
 
+/**
+ * 杨辉三角
+ */
+
 public class PascalTriangleTest {
     public static void main(String[] args) {
         ArrayList<ArrayList<Integer>> resultArrayList = new ArrayList();

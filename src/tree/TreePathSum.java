@@ -3,7 +3,7 @@ package tree;
 import java.util.ArrayList;
 
 /**
- * 路径总和 是否等于某个值
+ * 层级遍历
  */
 public class TreePathSum {
     public static void main(String[] args) {
@@ -11,6 +11,8 @@ public class TreePathSum {
         TreeNode root = createTree(data,0);
         print(root);
     }
+
+    //层级遍历
     public static TreeNode createTree(int[] treedata,int n) {
         if (treedata.length == 0){
             return null;
@@ -29,12 +31,10 @@ public class TreePathSum {
         if (node != null){
             if (node.left != null){
                 print(node.left);
-                System.out.println(node.data);
             }
             System.out.println(node.data);
             if (node.right != null){
                 print(node.left);
-                System.out.println(node.data);
             }
         }
     }
