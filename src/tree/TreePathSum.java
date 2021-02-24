@@ -16,16 +16,14 @@ public class TreePathSum {
     public static TreeNode createTree(int[] treedata,int n) {
         if (treedata.length == 0){
             return null;
-        }else {
-            if (n < treedata.length){
-                int left = n*2+1;
-                int right = n*2+2;
-                TreeNode treeroot = new TreeNode(treedata[n],createTree(treedata,left),createTree(treedata,right));
-                return  treeroot;
-            }else {
-                return null;
-            }
         }
+        if (n < treedata.length){
+            int left = n*2+1;
+            int right = n*2+2;
+            TreeNode treeroot = new TreeNode(treedata[n],createTree(treedata,left),createTree(treedata,right));
+            return treeroot;
+        }
+        return null;
     }
     public static void print(TreeNode node){
         if (node != null){
