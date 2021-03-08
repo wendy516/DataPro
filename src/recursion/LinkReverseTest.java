@@ -1,7 +1,9 @@
 package recursion;
 
+import recursion.bean.Node;
+
 /**
- *用链表实现  1，2，3，4  -》 2，1 ，4，3
+ * 用链表实现  1，2，3，4  -》 2，1 ，4，3
  */
 public class LinkReverseTest {
 
@@ -25,7 +27,7 @@ public class LinkReverseTest {
     public static void reverseNode(Node node) {
         //跳出循环条件
         // 判断下个节点 及 下下个节点是否为空
-        if (node.next == null || node.next.next == null || node.next.next.next ==null) {
+        if (node.next == null || node.next.next == null || node.next.next.next == null) {
             return;
         }
         Node nextNode = node.next;
@@ -34,7 +36,7 @@ public class LinkReverseTest {
         next2Node.next = nextNode;
         node.next = next2Node;
 
-        if (node.next!=null && node.next.next!=null){
+        if (node.next != null && node.next.next != null) {
             reverseNode(node.next.next);
         }
     }
@@ -50,13 +52,6 @@ public class LinkReverseTest {
             head = node;
         }
         return root;
-    }
-}
-
-class Node {
-    String data;
-    Node next;
-    public Node() {
     }
 }
 

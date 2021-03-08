@@ -1,6 +1,5 @@
 package tree;
-
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+import tree.bean.Node;
 
 import java.util.ArrayList;
 import java.util.Stack;
@@ -99,28 +98,6 @@ class RoadSum {
         if (tree.right != null) {
             System.out.println("right: ");
             printTree(tree.right);
-        }
-    }
-
-    static class Node {
-        int distance=-1;
-        Node left;
-        Node right;
-        Node parent;
-        int pre;
-
-
-        public Node(int distance) {
-            this.distance=distance;
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "distance=" + distance +
-                    ", left.distance=" + (left==null?-1:left.distance) +
-                    ", right.distance=" + (right==null?-1:right.distance) +
-                    '}';
         }
     }
 }

@@ -1,11 +1,13 @@
 package tree;
 
+import tree.bean.TreeNode;
+
 import java.util.ArrayList;
 
 /**
- * 层级遍历
+ * 层级遍历 --构建树
  */
-public class TreePathSum {
+public class TierCreateTree {
     public static void main(String[] args) {
         int[] data = new int[]{5,4,8,11,0,13,4,7,2,0,0,0,1};
         TreeNode root = createTree(data,0);
@@ -13,7 +15,7 @@ public class TreePathSum {
     }
 
     //层级遍历
-    public static TreeNode createTree(int[] treedata,int n) {
+    public static TreeNode createTree(int[] treedata, int n) {
         if (treedata.length == 0){
             return null;
         }

@@ -1,8 +1,8 @@
 package tree;
 
+import tree.bean.TreeNode;
+
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class BinaryTreeRecyleByFloor {
     static TreeNode root;
@@ -29,6 +29,8 @@ public class BinaryTreeRecyleByFloor {
         temp.add(root);
         floorTree(temp);
     }
+
+    //层序遍历
     public static void floorTree(ArrayList<TreeNode> floorList){
         ArrayList<TreeNode> list = new ArrayList<>();
         for (TreeNode treeNode : floorList){
@@ -45,7 +47,7 @@ public class BinaryTreeRecyleByFloor {
             floorTree(list);
         }
     }
-
+    // 中序遍历
     public static void print(TreeNode node){
         if (node != null){
             if (node.left != null){
@@ -59,7 +61,7 @@ public class BinaryTreeRecyleByFloor {
             }
         }
     }
-
+    //前序遍历
     private static void printTree(TreeNode tree) {
         System.out.println(tree.data);
         if (tree.left != null) {
@@ -88,21 +90,3 @@ public class BinaryTreeRecyleByFloor {
         }
         return root;
     }}
-
-class TreeNode{
-    int data;
-    TreeNode left;
-    TreeNode right;
-    TreeNode parent;
-    public TreeNode(){}
-    public TreeNode(int data){
-        this.data = data;
-    }
-
-    public TreeNode(int data, TreeNode left,TreeNode right){
-        this.data = data;
-        this.left = left;
-        this.right = right;
-    }
-
-}
